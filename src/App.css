@@ -1,0 +1,336 @@
+.main-container{
+  
+ 
+  width: 100%;
+  
+  height: 100vh;
+}
+
+
+
+.game-table{
+  background-color: #ffe3c2;
+  height: calc(100% - 75px);
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-table__info{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: calc(100% - 70px);
+display: inline-block;
+background-image: url(./Components/icons/question.png);
+background-size: 100%;
+margin: 10px;
+}
+
+
+.control-panel{
+  height: 75px;
+  text-align: right;
+  background-color: #feaf6b;
+}
+
+.control-panel__cotainer{
+  min-width: 600px;
+}
+
+  .button-for-panel{
+  display: inline-block;
+  min-width: 160px;
+  vertical-align: top;
+  height: 45px;
+  line-height: 40px;
+  border-radius: 8px;
+  margin: 15px 20px 0px 20px ;
+  font-weight: bold;
+ 
+   text-align: center;
+  color: #011f44;
+  background: white;
+    transition: .3s;
+    border: 2px solid #011f44;
+}
+ 
+.button-for-panel:hover {
+  background: #ffe3c2;
+  box-shadow: 5px 5px 20px #011f44;
+  color: #011f44;
+}
+
+.one-dice__container{
+  font-size: 15px; /*Size dice  depends on this*/
+  height: 7em;
+  
+  margin: 2.5em;
+  flex: 0 0 7em;
+}
+
+.one-dice{
+ 
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.one-dice__dice-panel{
+  position: relative;
+  top: -30%; left: -30%;
+  height: 160%;
+  width: 160%;
+  line-height: 0px;
+  font-size: 12px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.623);
+  opacity: 1;
+
+ 
+}
+
+
+.one-dice__dice-delete{
+position: absolute;
+top: 4%; left: 58%;
+
+display: inline-block;
+background-image: url(./Components/icons/exit_icon.png);
+background-size: 100%;
+height: 20%;
+width: 20%;
+opacity: 0;
+transition: .6s;
+}
+
+
+.one-dice__dice-settings{
+  position: absolute;
+  top: 5%; left:42%;
+  display: inline-block;
+  background-image: url(./Components/icons/settings__icon.png);
+  background-size: 100%;
+  height: 18%;
+  width: 18%;
+  opacity: 0;
+  transition: .6s;
+
+}
+
+
+
+
+.one-dice__reroll-one{
+  position: absolute;
+  top: 80%;
+  left: 22%;
+  font-size: 1em;
+  display: block;
+  margin: auto;
+  height: 15%;
+  width: 56%;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid black;
+  background: #ffe3c2;
+  transition: .6s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.one-dice__reroll-one:hover {
+transform: translateY(-3px);
+}
+
+.one-dice__dice-value{
+position: absolute;
+top: 19%; left: 19%;
+height: 62%;
+width: 62%;
+
+
+}
+
+.one-dice__dice-draft{
+  position: absolute;
+  top: 0; left: 0;
+  height: 76%;
+  width: 76%;
+  margin: calc(12% - 5px);
+  border: 5px dashed black;
+  border-radius: 14%;
+  opacity: 50%;
+  }
+
+  .one-dice__dice-draft-container{
+    font-size: 15px; /*Size dice  depends on this*/
+    height: 7em;
+    margin: 2.5em;
+    flex: 0 0 7em; 
+    transition: .3s;
+  }
+
+  .one-dice__dice-draft-container:hover{
+    transform: translateY(-7px);
+  } 
+
+  .one-dice__dice-draft:hover{
+      opacity: 90%;
+  }
+
+.one-dice__dice-value_text{
+  position: absolute;
+  top: 22%; left: 22%;
+  height:50%;
+  width: 50%;
+ 
+  border: 5px solid black;
+  color: #000;
+  border-radius: 14%;
+  text-align: center;
+    line-height: 160%;
+  font-weight: bold;
+  font-size: 4em;/*height of text in .one-dice__container */
+  }
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 350px;
+  background: white;
+  position: relative;
+  margin: 0 20px;
+  max-height: calc(100vh - 40px);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+}
+
+.modal-header,
+.modal-footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.modal-header {
+  border-bottom: 1px solid #dbdbdb;
+  justify-content: space-between;
+}
+.modal-footer {
+  border-top: 1px solid #dbdbdb;
+  justify-content: flex-end;
+}
+.modal-close {
+  cursor: pointer;
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+.modal-body {
+  overflow: auto;
+}
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.visible{
+  opacity: 1;
+}
+
+.visible_default{
+  opacity: 1;
+}
+
+.control-panel__reveal-button{
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  margin: 15px 20px;
+  background: white;
+  transition: .1s;
+  border: 2px solid #011f44;
+  padding: 7px;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: top;
+}
+
+ 
+.control-panel__reveal-button:hover {
+  background: #ffe3c2;
+  box-shadow: 5px 5px 20px #011f44;
+  color: #011f44;
+
+}
+
+.control-panel__hiden-buttons{
+  position: absolute;
+  top: -145px; left: -135px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 5;
+  visibility: hidden;
+
+}
+
+.control-panel__more-img{
+  height: 27px ;
+  width: 27px;
+  display: block;
+}
+
+.visible{
+visibility: visible;
+}
