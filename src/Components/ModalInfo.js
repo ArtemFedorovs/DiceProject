@@ -23,6 +23,7 @@ export default function ModalInfo(    { visible = false,  onClose}  ) {
                     </div>
                 </div>
               </div>
+              
     )
   }
 
