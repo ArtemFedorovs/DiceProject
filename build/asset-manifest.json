@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/DiceProject/static/css/main.7269ac3b.css",
+    "main.js": "/DiceProject/static/js/main.f5bd226c.js",
+    "static/media/question.png": "/DiceProject/static/media/question.a97e45146636971d8892.png",
+    "index.html": "/DiceProject/index.html",
+    "main.7269ac3b.css.map": "/DiceProject/static/css/main.7269ac3b.css.map",
+    "main.f5bd226c.js.map": "/DiceProject/static/js/main.f5bd226c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7269ac3b.css",
+    "static/js/main.f5bd226c.js"
+  ]
+}

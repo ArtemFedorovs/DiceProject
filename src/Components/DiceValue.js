@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
 import dice1icon from './icons/dice_1_icon.png';
 import dice2icon from './icons/dice_2_icon.png';

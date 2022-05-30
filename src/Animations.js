@@ -1,7 +1,6 @@
 export function rerollAnimation (target) {
     let jumpTarget= target.parentNode.parentNode;
     let rotateTarget=target.parentNode.childNodes[2] ;
-    let hideTarget=target.parentNode;
     let duration = 500;
     function createStep (start){
        
