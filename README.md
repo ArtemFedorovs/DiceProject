@@ -6,7 +6,7 @@ Virtual game dice. Throw all together or separately.
 You can:
 - Set maximum dice value;
 - Roll the one of the dice;
-- Roll oll dice together.  
+- Roll all dice together.  
 Project tech stack: React, HTML, CSS, JavaScript
 
 **User instructions**
